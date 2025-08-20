@@ -6,5 +6,10 @@ app = Flask(__name__)
 def hello():
     return "Hello World from Devops"
 
+@app.route('/about')
+def about():
+    return "This is About Page - Learning DevOps Flow"
+
+
 if __name__ =="__main__":
    app.run(host="0.0.0.0" , port =5000) 
