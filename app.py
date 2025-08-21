@@ -13,7 +13,7 @@ def about():
 
 @app.route('/home')
 def home():
-    return "This is home  Page - Learning DevOps Flow"
+    return "This is home  Page -where i can learn anything  Learning DevOps Flow"
 
 
 
