@@ -9,6 +9,9 @@ def hello():
 @app.route('/about')
 def about():
     return "This is About Page - Learning DevOps Flow"
+@app.route('/home')
+def home():
+    return "This is home  Page - Learning DevOps Flow"
 
 
 if __name__ =="__main__":
