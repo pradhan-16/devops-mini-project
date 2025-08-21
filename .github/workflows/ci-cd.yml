@@ -1,6 +1,13 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main # ✅ sirf main branch par chalega
+
 jobs:
   build:
-    runs-on: ubuntu-latest   # build on GitHub cloud runner
+    runs-on: ubuntu-latest # build on GitHub cloud runner
     steps:
       - uses: actions/checkout@v3
 
@@ -18,7 +25,7 @@ jobs:
           tags: chanchalpiyushsharma/flask-devops-app:latest
 
   deploy:
-    runs-on: self-hosted     # 🚀 runs on your laptop
+    runs-on: self-hosted # 🚀 runs on your laptop
     needs: build
     steps:
       - uses: actions/checkout@v3
@@ -34,4 +41,3 @@ jobs:
           # ✅ restart pods to force new image pull
           kubectl rollout restart deployment flask-app
           kubectl rollout status deployment flask-app
-
