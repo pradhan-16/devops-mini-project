@@ -1,3 +1,14 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - new-feature
+  pull_request:
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest   # build on GitHub cloud runner
